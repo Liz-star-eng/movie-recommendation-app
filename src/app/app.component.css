@@ -2,3 +2,22 @@
   flex: 1 1 auto;
 }
 
+main {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/spiderman.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: scroll;
+}
+h2 {
+  color: wheat;
+  font-size: 4rem;
+  padding: 16rem 1rem 2rem 20rem;
+}
+p{
+  color: whitesmoke;
+  font-size: 1rem;
+  padding: 10px 2rem;
+  margin-left: 20rem;
+}

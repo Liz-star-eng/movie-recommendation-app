@@ -23,6 +23,7 @@
   transition: transform 0.3s;
   border: 1px solid grey;
   border-radius: 10px;
+   background-color: whitesmoke;
 }
 
 .movie-item:hover {
