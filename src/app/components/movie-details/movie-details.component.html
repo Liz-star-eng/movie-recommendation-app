@@ -1,0 +1,24 @@
+<div class="movie-details">
+  <h2>{{ movieDetails.title }}</h2>
+  <p>{{ movieDetails.overview }}</p>
+  <!-- Other movie details like cast, crew, reviews, etc. -->
+</div>
+
+<div class="recommendations">
+  <div *ngIf="recommendedMovies.length > 0; else noRecommendations">
+    <h3 class="recommend-title">Recommended Movies</h3>
+    <div *ngFor="let movie of recommendedMovies" class="movie-recommendation">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+        alt="{{ movie.title }}"
+      />
+      <h4>{{ movie.title }}</h4>
+      <p>Release Date: {{ movie.release_date }}</p>
+      <p>Rating: {{ movie.vote_average }}/10</p>
+    </div>
+  </div>
+
+  <ng-template #noRecommendations>
+    <p>No recommendations available.</p>
+  </ng-template>
+</div>

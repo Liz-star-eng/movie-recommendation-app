@@ -1,0 +1,29 @@
+.movie-details{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.recommendations {
+  margin-top: 30px;
+}
+
+.movie-recommendation {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.movie-recommendation img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.recommend-title{
+    font-weight: 500;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+
+}

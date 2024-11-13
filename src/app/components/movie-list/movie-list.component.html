@@ -1,0 +1,16 @@
+<div class="container">
+  <!-- Search input -->
+  <input [(ngModel)]="query" (keyup)="onSearch()" placeholder="Search for movies..." class="search-input" />
+
+  <!-- Display movie results -->
+  <div *ngIf="movies.length > 0" class="movie-list">
+    <div *ngFor="let movie of movies" (click)="onMovieClick(movie.id)" class="movie-item">
+      <img [src]="'https://image.tmdb.org/t/p/w200/' + movie.poster_path" alt="{{ movie.title }}" />
+      <div class="movie-info">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.release_date }}</p>
+        <p>Rating: {{ movie.vote_average }}</p>
+      </div>
+    </div>
+  </div>
+</div>
