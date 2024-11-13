@@ -1,28 +1,78 @@
-.movie-details{
-    max-width: 80%;
-    margin: auto;
-    text-align: center;
+main{
+  padding: 5rem 1rem 1rem;
+}
+.movie-details {
+
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.movie-details img {
+  width: 20%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+.movie-details-text {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+}
+.button{
+  float: left;
+  color: whitesmoke;
+}
+
+.button:hover {
+   background-color: rgb(251, 134, 134);
+   border-radius: 50%;
+   transition: 0.3s;
+}
+.selected-movie {
+  margin-top: 20px;
 }
 
 .recommendations {
   margin-top: 30px;
+  background-color: whitesmoke;
 }
 
 .movie-recommendation {
+  cursor: pointer;
   display: inline-block;
   margin: 10px;
   text-align: center;
+  border-radius: 4px;
+  width: 15%;
+  height: 100px;
+  background-color: whitesmoke;
+}
+
+.movie-recommendation .details {
+  padding: 0 8px 5px;
+}
+
+.movie-recommendation:hover {
+  opacity: 0.8;
 }
 
 .movie-recommendation img {
-  width: 150px;
-  height: auto;
+  width: 100%;
   border-radius: 5px;
 }
 
-.recommend-title{
-    font-weight: 500;
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 10px;
+.recommend-title {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 10px;
+  /* color: whitesmoke; */
+}
+
+.no-recommendation {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px 10px 2rem;
 }

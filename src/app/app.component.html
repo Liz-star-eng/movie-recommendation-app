@@ -1,21 +1,13 @@
 <main>
-  <mat-toolbar>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-    ></button>
-    <span>Movie Recommendation App</span>
+  <mat-toolbar class="toolbar">
+    <span>{{ title }}</span>
   </mat-toolbar>
-  <h2>Free Movies to Watch, <br> <br> Anytime Anywhere.</h2>
-  <p>
+  <h2 *ngIf="isMovieSelected || showContent">Free Movies to Watch, <br> <br> Anytime Anywhere.</h2>
+  <p *ngIf="isMovieSelected || showContent">
     The search is over! Let Us help you find the perfect movie to watch
     for free.
   </p>
-  <div class="app-container">
-    <app-movie-list></app-movie-list>
-    <!-- <app-movie-details></app-movie-details> -->
-  </div>
+  <!-- <a *ngIf="showButton" routerLink="movies"><button>Search for movie here</button></a> -->
+  <router-outlet></router-outlet>
 </main>
 
-<router-outlet></router-outlet>

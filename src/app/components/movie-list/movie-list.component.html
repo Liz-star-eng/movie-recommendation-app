@@ -1,10 +1,29 @@
 <div class="container">
-  <input [(ngModel)]="query" (keyup)="onSearch()" placeholder="Search for movies..." class="search-input" />
+<div class="input">
+    <input
+    [(ngModel)]="query"
+    (keyup)="onSearch()"
+    placeholder="Search for movies..."
+    class="search-input"
+  />
+</div>
+  <div *ngIf="query.trim()">
+    <div class="search-header">
+      <h2>Search Results For: {{ query }}</h2>
+    </div>
+  </div>
 
   <!-- Display movie results -->
   <div *ngIf="movies.length > 0" class="movie-list">
-    <div *ngFor="let movie of movies" (click)="onMovieClick(movie.id)" class="movie-item">
-      <img [src]="'https://image.tmdb.org/t/p/w200/' + movie.poster_path" alt="{{ movie.title }}" />
+    <div
+      *ngFor="let movie of movies"
+      (click)="onMovieClick(movie.id)"
+      class="movie-item"
+    >
+      <img
+        [src]="'https://image.tmdb.org/t/p/w200/' + movie.poster_path"
+        alt="{{ movie.title }}"
+      />
       <div class="movie-info">
         <h3>{{ movie.title }}</h3>
         <p>{{ movie.release_date }}</p>
@@ -12,4 +31,12 @@
       </div>
     </div>
   </div>
+   <!-- Optionally show selected movie details -->
+  <div *ngIf="selectedMovie" class="movie-details">
+    <h2>{{ selectedMovie.title }}</h2>
+    <p>{{ selectedMovie.overview }}</p>
+    <p>Release Date: {{ selectedMovie.release_date }}</p>
+    <p>Rating: {{ selectedMovie.vote_average }}</p>
+  </div>
 </div>
+

@@ -1,23 +1,38 @@
-<div class="movie-details">
-  <h2>{{ movieDetails.title }}</h2>
-  <p>{{ movieDetails.overview }}</p>
-</div>
+<main>
+  <button mat-icon-button (click)="goBack()" aria-label="Go back" class="button">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
 
-<div class="recommendations">
-  <div *ngIf="recommendedMovies.length > 0; else noRecommendations">
-    <h3 class="recommend-title">Recommended Movies</h3>
-    <div *ngFor="let movie of recommendedMovies" class="movie-recommendation">
-      <img
-        [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-        alt="{{ movie.title }}"
-      />
-      <h4>{{ movie.title }}</h4>
-      <p>Release Date: {{ movie.release_date }}</p>
-      <p class="rating">Rating: {{ movie.vote_average }}/10</p>
+  <div class="movie-details"  *ngIf="movieDetails">
+    <img
+      [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path"
+      alt="{{ movieDetails.title }}"
+    />
+    <div class="movie-details-text" >
+      <h2>{{ movieDetails.title }}</h2>
+      <p>{{ movieDetails.overview }}</p>
+       <p>{{ movieDetails.cast }}</p>
     </div>
   </div>
 
-  <ng-template #noRecommendations>
-    <p>No recommendations available.</p>
-  </ng-template>
-</div>
+  <div class="recommendations">
+    <div *ngIf="recommendedMovies.length > 0; else noRecommendations">
+      <h3 class="recommend-title">Recommended Movies</h3>
+      <div *ngFor="let movie of recommendedMovies" class="movie-recommendation">
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+          alt="{{ movie.title }}"
+        />
+        <div class="details">
+          <h4>{{ movie.title }}</h4>
+          <p>Release Date: {{ movie.release_date }}</p>
+          <p class="rating">Rating: {{ movie.vote_average }}/10</p>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noRecommendations>
+      <p class="no-recommendation">No recommendations available.</p>
+    </ng-template>
+  </div>
+</main>

@@ -3,7 +3,10 @@
   margin: 0 auto;
   padding: 20px;
 }
-
+.input{
+  max-width: 70%;
+  margin: auto;
+}
 .search-input {
   width: 100%;
   padding: 10px;
@@ -25,6 +28,9 @@
   border-radius: 10px;
    background-color: whitesmoke;
 }
+.selected-movie {
+  margin-top: 20px;
+}
 
 .movie-item:hover {
   transform: scale(1.05);
@@ -38,4 +44,8 @@
 .movie-info {
   text-align: center;
   margin-top: 10px;
+}
+
+.search-header{
+  color: white;
 }
