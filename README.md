@@ -1,27 +1,14 @@
-# MovieRecommendationApplication
+# Movie Recommendation Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+This is a frontend-only movie recommendation application built with Angular. It leverages the TMDB API to allow users to search for movies, view detailed information, and get movie recommendations based on their selected movie.
 
-## Development server
+Features
+Movie Search: Users can search for movies by title or keyword. The search results display movie posters, titles, release dates, and ratings.
+Movie Details: Detailed information about the selected movie is provided, including plot summary, cast, crew, reviews, and ratings.
+Movie Recommendations: Based on the selected movie, the app displays similar or recommended movies using the TMDB Recommendations API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Technologies Used
+Angular: Frontend framework used to build the application.
+TMDB API: Used for fetching movie data, including movie details, search results, and recommendations.
+CSS: For styling the application.
+Angular HttpClient: For making HTTP requests to the TMDB API.
