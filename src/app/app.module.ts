@@ -15,6 +15,7 @@ import { SearchComponent } from './components/search/search.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromMovieState from './reducers';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,6 @@ import * as fromMovieState from './reducers';
     FormsModule,
     HttpClientModule,
     RouterModule,
-    // StoreModule.forFeature(fromMovieState.movieStateFeatureKey, fromMovieState.reducers, { metaReducers: fromMovieState.metaReducers }),
   ],
   providers: [],
   bootstrap: [AppComponent],

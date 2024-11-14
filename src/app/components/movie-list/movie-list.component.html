@@ -14,11 +14,12 @@
   </div>
 
   <!-- Display movie results -->
-  <div *ngIf="movies.length > 0" class="movie-list">
+  <div *ngIf="movies.length > 0" class="movie-list"  [@listAnimation]>
     <div
       *ngFor="let movie of movies"
       (click)="onMovieClick(movie.id)"
       class="movie-item"
+   
     >
       <img
         [src]="'https://image.tmdb.org/t/p/w200/' + movie.poster_path"

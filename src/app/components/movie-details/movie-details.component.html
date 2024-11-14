@@ -3,7 +3,7 @@
     <mat-icon>arrow_back</mat-icon>
   </button>
 
-  <div class="movie-details"  *ngIf="movieDetails">
+  <div class="movie-details"  *ngIf="movieDetails" [@listAnimation]>
     <img
       [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path"
       alt="{{ movieDetails.title }}"
@@ -16,7 +16,7 @@
   </div>
 
   <div class="recommendations">
-    <div *ngIf="recommendedMovies.length > 0; else noRecommendations">
+    <div *ngIf="recommendedMovies.length > 0; else noRecommendations" [@listAnimation]>
       <h3 class="recommend-title">Recommended Movies</h3>
       <div *ngFor="let movie of recommendedMovies" class="movie-recommendation">
         <img
